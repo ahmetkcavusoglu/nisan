@@ -3,208 +3,202 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Halime & Ahmet Kemal — 18 Temmuz 2026</title>
-<meta name="description" content="Halime ve Ahmet Kemal'in nişan davetiyesi. 18 Temmuz 2026, Gaziantep Marina.">
+<title>Halime & Ahmet Kemal — Fotoğraflarınızı Paylaşın</title>
+<meta name="description" content="Halime ve Ahmet Kemal'in nişanından çektiğiniz fotoğraf ve videoları paylaşın.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,400;0,500;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#f5f6f4;        /* açık kireç beyazı */
-  --ink:#23282b;       /* mürekkep grisi */
-  --muted:#6f7a78;     /* yumuşak gri */
-  --water:#5b8a83;     /* göl yeşili-mavisi — tek aksan */
-  --water-soft:#acc6c1;
-  --line:#dfe3e0;
+  --bg:#f5f6f4;
+  --ink:#23282b;
+  --muted:#717a78;
+  --accent:#5b8a83;
+  --accent-soft:#e4ecea;
+  --line:#e2e6e3;
   --card:#ffffff;
 }
 *{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
 body{
-  font-family:'Jost',system-ui,sans-serif;
-  background:var(--bg);color:var(--ink);
-  line-height:1.6;font-weight:300;
+  font-family:'Jost',system-ui,sans-serif;background:var(--bg);color:var(--ink);
+  font-weight:300;line-height:1.6;min-height:100svh;
+  display:flex;align-items:center;justify-content:center;padding:32px 20px;
   -webkit-font-smoothing:antialiased;
 }
 .serif{font-family:'Cormorant',Georgia,serif}
-.wrap{max-width:780px;margin:0 auto;padding:0 24px}
-section{padding:96px 0}
+.card{
+  width:100%;max-width:480px;text-align:center;
+}
 .eyebrow{
-  font-size:13px;letter-spacing:.28em;text-transform:uppercase;
-  color:var(--water);font-weight:400;margin-bottom:18px;
+  font-size:12px;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--accent);font-weight:400;margin-bottom:20px;
 }
+.names{
+  font-size:clamp(40px,11vw,68px);font-weight:400;line-height:1.08;
+}
+.amp{display:block;font-style:italic;color:var(--accent);font-size:.5em;margin:2px 0}
+.date{
+  margin-top:18px;font-size:13px;letter-spacing:.26em;text-transform:uppercase;color:var(--muted);
+}
+.divider{width:40px;height:1px;background:var(--accent-soft);margin:36px auto}
+.lead{
+  font-family:'Cormorant',serif;font-size:clamp(20px,4.5vw,26px);
+  color:var(--ink);margin-bottom:8px;line-height:1.45;
+}
+.sub{color:var(--muted);font-size:15px;margin-bottom:32px;max-width:380px;margin-left:auto;margin-right:auto}
 
-/* ── HERO ── */
-.hero{
-  min-height:100svh;display:flex;flex-direction:column;
-  align-items:center;justify-content:center;text-align:center;
-  position:relative;overflow:hidden;padding:40px 24px;
+.field{margin-bottom:18px;text-align:left}
+.field label{display:block;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.field input{
+  width:100%;padding:13px 16px;border:1px solid var(--line);border-radius:12px;
+  font-family:inherit;font-size:16px;background:var(--card);color:var(--ink);font-weight:300;
 }
-.hero-names{
-  font-size:clamp(48px,13vw,104px);font-weight:400;line-height:1.05;
-  letter-spacing:.01em;
-}
-.hero-amp{
-  display:block;font-style:italic;color:var(--water);
-  font-size:clamp(28px,7vw,56px);margin:8px 0;font-weight:400;
-}
-.hero-date{
-  margin-top:28px;font-size:14px;letter-spacing:.3em;
-  text-transform:uppercase;color:var(--muted);
-}
-.scroll-cue{
-  position:absolute;bottom:32px;left:50%;transform:translateX(-50%);
-  width:1px;height:48px;background:linear-gradient(var(--water-soft),transparent);
-  animation:pulse 2.4s ease-in-out infinite;
-}
-@keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
+.field input:focus{outline:none;border-color:var(--accent)}
 
-/* su dalgası imza öğesi */
-.waves{position:absolute;bottom:0;left:0;width:100%;height:120px;opacity:.5;pointer-events:none}
-
-/* ── COUNTDOWN ── */
-.countdown{text-align:center;background:var(--card);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.count-grid{
-  display:flex;justify-content:center;gap:clamp(16px,6vw,56px);margin-top:36px;flex-wrap:wrap;
-}
-.count-item{display:flex;flex-direction:column;align-items:center;min-width:64px}
-.count-num{
-  font-family:'Cormorant',serif;font-size:clamp(44px,11vw,80px);
-  font-weight:500;line-height:1;color:var(--ink);
-}
-.count-label{
-  font-size:11px;letter-spacing:.24em;text-transform:uppercase;
-  color:var(--muted);margin-top:10px;
-}
-
-/* ── STORY ── */
-.story{text-align:center}
-.story p{
-  font-family:'Cormorant',serif;font-size:clamp(22px,3.4vw,30px);
-  font-weight:400;color:var(--ink);max-width:600px;margin:0 auto;line-height:1.55;
-}
-.story p + p{margin-top:24px}
-
-/* ── LOCATION ── */
-.location{text-align:center}
-.venue-name{font-family:'Cormorant',serif;font-size:clamp(28px,5vw,40px);font-weight:500;margin-bottom:8px}
-.venue-addr{color:var(--muted);font-size:15px;max-width:440px;margin:0 auto 28px}
-.map-frame{
-  border:1px solid var(--line);border-radius:14px;overflow:hidden;
-  box-shadow:0 6px 30px rgba(35,40,43,.06);
-}
-.map-frame iframe{display:block;width:100%;height:360px;border:0;filter:grayscale(.25)}
 .btn{
-  display:inline-block;margin-top:24px;background:var(--ink);color:#fff;
-  text-decoration:none;padding:15px 34px;border-radius:999px;
-  font-size:14px;letter-spacing:.08em;font-weight:400;
-  transition:transform .2s ease,background .2s ease;
+  width:100%;border:none;cursor:pointer;
+  background:var(--accent);color:#fff;font-family:inherit;font-weight:400;
+  font-size:16px;letter-spacing:.04em;padding:16px;border-radius:14px;
+  transition:transform .15s ease,background .2s ease;
 }
-.btn:hover{transform:translateY(-2px);background:var(--water)}
-.btn-water{background:var(--water)}
-.btn-water:hover{background:var(--ink)}
+.btn:hover:not(:disabled){transform:translateY(-2px)}
+.btn:active{transform:translateY(0)}
+.btn:disabled{opacity:.5;cursor:default}
+.btn-soft{background:var(--card);color:var(--ink);border:1px solid var(--line)}
 
-/* ── PHOTOS ── */
-.photos{text-align:center;background:var(--card);border-top:1px solid var(--line)}
-.photos p{color:var(--muted);max-width:480px;margin:0 auto 8px}
+.row{display:flex;gap:10px;margin-top:14px}
+.row .btn{margin:0}
 
-/* ── FOOTER ── */
-footer{text-align:center;padding:48px 24px;color:var(--muted);font-size:13px;letter-spacing:.1em}
-footer .heart{color:var(--water)}
+.hint{margin-top:18px;font-size:13px;color:var(--muted)}
 
-@media (prefers-reduced-motion:reduce){
-  *{animation:none!important;scroll-behavior:auto}
-}
+/* yükleme durumu */
+.status{margin-top:22px;min-height:24px;font-size:15px;color:var(--ink)}
+.bar{height:4px;background:var(--accent-soft);border-radius:999px;overflow:hidden;margin-top:14px;display:none}
+.bar > div{height:100%;width:0;background:var(--accent);transition:width .3s ease}
+
+/* önizleme küçük resimler */
+.thumbs{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:20px}
+.thumbs .t{width:60px;height:60px;border-radius:10px;object-fit:cover;border:1px solid var(--line);position:relative}
+.thumbs .t.ok{outline:2px solid var(--accent)}
+
+.foot{margin-top:36px;font-size:12px;letter-spacing:.1em;color:var(--muted)}
+.foot .h{color:var(--accent)}
+
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
 </head>
 <body>
+<main class="card">
+  <p class="eyebrow">Nişan · 18 Temmuz 2026</p>
+  <h1 class="names serif">Halime<span class="amp serif">&amp;</span>Ahmet Kemal</h1>
+  <div class="divider"></div>
 
-<!-- HERO -->
-<header class="hero">
-  <p class="eyebrow">Nişanımıza davetlisiniz</p>
-  <h1 class="hero-names serif">
-    Halime
-    <span class="hero-amp serif">&amp;</span>
-    Ahmet Kemal
-  </h1>
-  <p class="hero-date">18 Temmuz 2026 · Cumartesi · 14.00</p>
-  <svg class="waves" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-    <path fill="#acc6c1" d="M0,64 C240,96 480,32 720,48 C960,64 1200,112 1440,72 L1440,120 L0,120 Z" opacity=".4"/>
-    <path fill="#5b8a83" d="M0,88 C300,56 540,104 780,80 C1020,56 1260,96 1440,80 L1440,120 L0,120 Z" opacity=".25"/>
-  </svg>
-  <div class="scroll-cue"></div>
-</header>
+  <p class="lead serif">Bu güzel günü birlikte yaşadık.</p>
+  <p class="sub">Çektiğiniz fotoğraf ve videoları bizimle paylaşın — hepsi tek bir yerde toplansın.</p>
 
-<!-- COUNTDOWN -->
-<section class="countdown">
-  <div class="wrap">
-    <p class="eyebrow">Mutlu güne</p>
-    <div class="count-grid" id="countdown">
-      <div class="count-item"><span class="count-num" id="d">—</span><span class="count-label">Gün</span></div>
-      <div class="count-item"><span class="count-num" id="h">—</span><span class="count-label">Saat</span></div>
-      <div class="count-item"><span class="count-num" id="m">—</span><span class="count-label">Dakika</span></div>
-      <div class="count-item"><span class="count-num" id="s">—</span><span class="count-label">Saniye</span></div>
-    </div>
+  <div class="field">
+    <label for="uploader">Adınız (isteğe bağlı)</label>
+    <input id="uploader" type="text" placeholder="Adınız" autocomplete="name">
   </div>
-</section>
 
-<!-- STORY -->
-<section class="story">
-  <div class="wrap">
-    <p class="eyebrow">Hikayemiz</p>
-    <p>Bazı yollar, başından beri aynı yere çıkacakmış gibi başlar. Bizimki de öyle oldu.</p>
-    <p>Birbirimizi tanıdığımız o ilk günden bugüne, hayatı paylaşmanın ne demek olduğunu öğrendik. Şimdi bu yolculuğun en güzel adımını, bizi sevenlerle birlikte atmak istiyoruz.</p>
-    <p>Bu mutlu günümüzde yanımızda olduğunuz için şimdiden teşekkür ederiz.</p>
+  <input type="file" id="files" accept="image/*,video/*" multiple capture="environment" hidden>
+  <button class="btn" id="pick">Fotoğraf veya video seç</button>
+
+  <div class="bar" id="bar"><div></div></div>
+  <div class="status" id="status"></div>
+  <div class="thumbs" id="thumbs"></div>
+
+  <div class="row" id="after" style="display:none">
+    <button class="btn" id="more">Daha fazla ekle</button>
+    <a class="btn btn-soft" id="galleryLink" href="#" target="_blank" rel="noopener" style="text-decoration:none;display:flex;align-items:center;justify-content:center">Galeriyi gör</a>
   </div>
-</section>
 
-<!-- LOCATION -->
-<section class="location">
-  <div class="wrap">
-    <p class="eyebrow">Konum</p>
-    <h2 class="venue-name serif">Gaziantep Marina Balo ve Kongre Merkezi</h2>
-    <p class="venue-addr">Sarısalkım Mah. Yamaçtepe Yolu Üzeri No:176, Alleben Göleti, 27410 Şahinbey / Gaziantep</p>
-    <div class="map-frame">
-      <iframe
-        src="https://maps.google.com/maps?q=Gaziantep+Marina+Balo+ve+Kongre+Merkezi+Alleben&t=&z=16&ie=UTF8&iwloc=&output=embed"
-        loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mekan konumu"></iframe>
-    </div>
-    <a class="btn" href="https://www.google.com/maps/search/?api=1&query=Gaziantep+Marina+Balo+ve+Kongre+Merkezi" target="_blank" rel="noopener">Yol tarifi al</a>
-  </div>
-</section>
+  <p class="hint">Fotoğraflar doğrudan çiftin albümüne yüklenir.</p>
 
-<!-- PHOTOS -->
-<section class="photos">
-  <div class="wrap">
-    <p class="eyebrow">Anılarımız</p>
-    <h2 class="venue-name serif">Çektiğiniz kareleri paylaşın</h2>
-    <p>O anı en güzel siz yakaladınız. Fotoğraf ve videolarınızı bizimle paylaşın, hepsi tek bir yerde toplansın.</p>
-    <a class="btn btn-water" href="https://anipano.ahmetkcavusoglu.workers.dev/e/halime-ahmet-kemal-eftr" target="_blank" rel="noopener">Fotoğraf paylaş</a>
-  </div>
-</section>
-
-<footer>
-  Halime <span class="heart">&amp;</span> Ahmet Kemal · 2026
-</footer>
+  <p class="foot">Halime <span class="h">&amp;</span> Ahmet Kemal · 2026</p>
+</main>
 
 <script>
-// Geri sayım — 18 Temmuz 2026, 14:00 (Türkiye saati, UTC+3)
-const target = new Date('2026-07-18T14:00:00+03:00').getTime();
-const el = {d:document.getElementById('d'),h:document.getElementById('h'),m:document.getElementById('m'),s:document.getElementById('s')};
-function pad(n){return String(n).padStart(2,'0')}
-function tick(){
-  const now=Date.now();
-  let diff=Math.max(0,target-now);
-  const day=Math.floor(diff/86400000);diff-=day*86400000;
-  const hr=Math.floor(diff/3600000);diff-=hr*3600000;
-  const min=Math.floor(diff/60000);diff-=min*60000;
-  const sec=Math.floor(diff/1000);
-  el.d.textContent=day;
-  el.h.textContent=pad(hr);
-  el.m.textContent=pad(min);
-  el.s.textContent=pad(sec);
+// ── Anipano bağlantısı ──
+const API_BASE = 'https://anipano.ahmetkcavusoglu.workers.dev';
+const SLUG = 'halime-ahmet-kemal-eftr';
+
+document.getElementById('galleryLink').href = API_BASE + '/g/' + SLUG;
+
+const fileInput = document.getElementById('files');
+const pick = document.getElementById('pick');
+const more = document.getElementById('more');
+const statusEl = document.getElementById('status');
+const bar = document.getElementById('bar');
+const barFill = bar.firstElementChild;
+const thumbs = document.getElementById('thumbs');
+const after = document.getElementById('after');
+
+pick.onclick = () => fileInput.click();
+more.onclick = () => fileInput.click();
+
+function vidDur(f){
+  return new Promise((res,rej)=>{
+    const v=document.createElement('video');v.preload='metadata';
+    v.onloadedmetadata=()=>res(Math.round(v.duration));v.onerror=rej;
+    v.src=URL.createObjectURL(f);
+  });
 }
-tick();setInterval(tick,1000);
+
+fileInput.onchange = async (e) => {
+  const files = [...e.target.files];
+  if(!files.length) return;
+  after.style.display = 'none';
+  thumbs.innerHTML = '';
+  pick.disabled = true; more.disabled = true;
+  bar.style.display = 'block';
+
+  const uploader = document.getElementById('uploader').value.trim();
+  let done = 0, failed = 0;
+
+  // küçük önizlemeler
+  const thumbEls = files.map(f=>{
+    if(!f.type.startsWith('image')) return null;
+    const img=document.createElement('img');
+    img.className='t';img.src=URL.createObjectURL(f);
+    thumbs.appendChild(img);return img;
+  });
+
+  for(let i=0;i<files.length;i++){
+    const f = files[i];
+    statusEl.textContent = 'Yükleniyor… ' + (i+1) + ' / ' + files.length;
+    barFill.style.width = ((i)/files.length*100) + '%';
+
+    const kind = f.type.startsWith('video') ? 'video' : 'photo';
+    let duration = 0;
+    if(kind==='video'){ try{ duration = await vidDur(f); }catch{} }
+
+    const fd = new FormData();
+    fd.append('file', f);
+    fd.append('kind', kind);
+    fd.append('uploader', uploader);
+    fd.append('duration', duration);
+
+    try{
+      const r = await fetch(API_BASE + '/api/events/' + SLUG + '/confirm', { method:'POST', body:fd });
+      const d = await r.json();
+      if(d.error){ failed++; }
+      else { done++; if(thumbEls[i]) thumbEls[i].classList.add('ok'); }
+    }catch(err){ failed++; }
+  }
+
+  barFill.style.width = '100%';
+  setTimeout(()=>{ bar.style.display='none'; barFill.style.width='0'; }, 600);
+
+  if(done && !failed) statusEl.textContent = '✓ ' + done + ' dosya yüklendi. Teşekkür ederiz!';
+  else if(done && failed) statusEl.textContent = '✓ ' + done + ' yüklendi · ' + failed + ' başarısız oldu.';
+  else statusEl.textContent = 'Yükleme başarısız oldu. Lütfen tekrar deneyin.';
+
+  pick.disabled = false; more.disabled = false;
+  pick.style.display = 'none';
+  after.style.display = 'flex';
+  fileInput.value = '';
+};
 </script>
 </body>
 </html>
